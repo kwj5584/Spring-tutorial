@@ -78,10 +78,8 @@ class MemberServiceTest {
         member1.setName("spring1");
 
         memberService.join(member1);
-        Long saveId = member1.getId();
-        System.out.println("saveId:"+saveId);
-
-        Member result = memberService.findOne(member1.getId()).get();
+        Long test = member1.getId();
+        Member result = memberService.findOne(test).get();
         assertThat(member1).isEqualTo(result);
     }
 }
