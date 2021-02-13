@@ -21,7 +21,7 @@ public class MemberService {
     /** 회원가입 */
     public Long join(Member member){
         // 같은 이름이 있는 중복 회원X
-        validateDuplicateMember(member); // 중복회우너 검증
+        validateDuplicateMember(member); // 중복회원 검증
         memberRepository.save(member);
        return member.getId();
     }
